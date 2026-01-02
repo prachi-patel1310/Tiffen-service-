@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gujarati Thali</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #f44336;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .thali-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .thali-image img {
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+            padding-left: 90px;
+              width: 300px;
+              height: 250px;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+
+        .thali-details {
+            padding: 20px;
+        }
+
+        .thali-details h2 {
+            color: #333;
+            font-size: 20px;
+            margin-top: 0;
+        }
+
+        .thali-details ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .thali-details ul li {
+            margin-bottom: 8px;
+        }
+
+        .price {
+            font-weight: bold;
+            font-size: 18px;
+            color: #f44336;
+        }
+
+        button {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #d32f2f;
+        }
+
+        footer {
+           margin-top: 355px;
+
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        Gujarati Thali
+    </header>
+
+    <div class="container">
+        <section class="thali-section">
+            <div class="thali-image">
+                <img src="https://thalinearme.com/wp-content/uploads/2023/11/Gujarati-Thali-at-Bhojan-Panjim.webp" alt="Gujarati Thali">
+            </div>
+            <div class="thali-details">
+                <h2>What's in the Thali?</h2>
+                <ul>
+                    <li>Dhokla</li>
+                    <li>Khandvi</li>
+                    <li>Gujarati Kadhi</li>
+                    <li>Rice</li>
+                    <li>Roti</li>
+                    <li>Vegetable Curry</li>
+                    <li>Pickle</li>
+                    <li>Salad</li>
+                    <li>Papad</li>
+                    <li>Sweet (Gulab Jamun)</li>
+                </ul>
+                <p class="price">Price: ₹330</p>
+                <button onclick="redirectToGujSucPage()">Order Now</button>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2024 Gujarati Cuisine. All rights reserved.
+    </footer>
+
+
+  <script>
+
+    function redirectToGujSucPage() {
+      window.location.href ="gujsuccess.html";
+    }
+  </script>
+
+</body>
+
+</html>

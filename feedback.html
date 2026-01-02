@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Feedback Form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+    body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: column;
+      height: 100vh;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .textup {
+      text-align: center;
+      color: rgb(11, 118, 11);
+      font-weight: 700;
+    }
+
+    i {
+      margin-right: 3px;
+    }
+
+    .form-box {
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(36, 67, 40, 0.8);
+      padding: 15px;
+      border-radius: 8px;
+      width: 500px;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .radio-group {
+      display: flex;
+      margin-bottom: 16px;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    label.star {
+      display: inline-block;
+      font-size: 1.5em;
+      color: #FFD700;
+      cursor: pointer;
+    }
+
+    label.star:before {
+      content: '\2605'; /* Unicode character for star */
+    }
+
+    input[type="radio"]:checked~label.star:before {
+      content: '\2605'; /* Unicode character for filled star */
+    }
+
+    .star-group {
+      margin-bottom: 12px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 17px;
+      color: green;
+      font-weight: 600;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 12px;
+      box-sizing: border-box;
+      border-radius: 10px;
+    }
+
+    button {
+      background-color: white;
+      color: black;
+      padding: 10px;
+      border: 1px solid black;
+      border-radius: 12px;
+      cursor: pointer;
+      width: 80%;
+      font-size: 15px;
+      margin-left:35px ;
+      transition: background-color .3s, border-color .5s,color .2s,opacity .8s;
+    }
+
+    button:hover {
+      background-color: darkgrey;
+      border: none;
+    }
+
+    h1 {
+      color: white;
+    }
+
+    form>label {
+      color: black;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .rate {
+        float: left;
+        height: 46px;
+        padding: 0 10px;
+    }
+    .rate:not(:checked) > input {
+        position:absolute;
+        top:-9999px;
+    }
+    .rate:not(:checked) > label {
+        float:right;
+        width:1em;
+        overflow:hidden;
+        white-space:nowrap;
+        cursor:pointer;
+        font-size:30px;
+        color:#ccc;
+    }
+    .rate:not(:checked) > label:before {
+        content: '★ ';
+    }
+    .rate > input:checked ~ label {
+        color: #ffc700;    
+    }
+    .rate:not(:checked) > label:hover,
+    .rate:not(:checked) > label:hover ~ label {
+        color: #deb217;  
+    }
+    .rate > input:checked + label:hover,
+    .rate > input:checked + label:hover ~ label,
+    .rate > input:checked ~ label:hover,
+    .rate > input:checked ~ label:hover ~ label,
+    .rate > label:hover ~ input:checked ~ label {
+        color: #c59b08;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 style="font-family: 'Cedarville Cursive', cursive; color:black; font-size: 60px;">Spice & Slice</h1>
+  <div class="form-box">
+    <div class="textup" style="color: black;">
+      <i class="fa fa-solid fa-clock"></i> It only takes two minutes!!
+      
+    </div>
+    <form>
+      <label for="uname">
+        <i class="fa fa-solid fa-user"></i> Name
+      </label>
+      <input type="text" id="uname" name="uname" required>
+
+      <label for="email">
+        <i class="fa fa-solid fa-envelope"></i> Email Address
+      </label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">
+        <i class="fa-solid fa-phone"></i> Phone No
+      </label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <div class="star-group">
+        <label for="rating" style="color:black;">
+          <i class="fa-solid fa-star"></i> Rating
+        </label>
+        <div class="radio-group">
+          <input type="radio" id="star5" name="rating" value="5">
+          <label class="star" for="star5"></label>
+          <input type="radio" id="star4" name="rating" value="4">
+          <label class="star" for="star4"></label>
+          <input type="radio" id="star3" name="rating" value="3">
+          <label class="star" for="star3"></label>
+          <input type="radio" id="star2" name="rating" value="2">
+          <label class="star" for="star2"></label>
+          <input type="radio" id="star1" name="rating" value="1">
+          <label class="star" for="star1"></label>
+        </div>
+      </div>
+
+      <label for="msg">
+        <i class="fa fa-solid fa-comments" style="margin-right: 3px;"></i> Write your Suggestions:
+      </label>
+      <textarea id="msg" name="msg" rows="4" cols="10" required></textarea>
+      <button type="submit" style:"margin-bottom:30px">Submit</button>
+    </form>
+  </div>
+</body>
+
+</html>
+    

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kathiyavadi Thali</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #e57373;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .thali-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .thali-image img {
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+            padding-left: 90px;
+              width: 300px;
+              height: 250px;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+
+        .thali-details {
+            padding: 20px;
+        }
+
+        .thali-details h2 {
+            color: #333;
+            font-size: 20px;
+            margin-top: 0;
+        }
+
+        .thali-details ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .thali-details ul li {
+            margin-bottom: 8px;
+        }
+
+        .price {
+            font-weight: bold;
+            font-size: 18px;
+            color: #e57373;
+        }
+
+        button {
+            background-color: #e57373;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #d32f2f;
+        }
+
+        footer {
+           margin-top: 381px;
+
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        Kathiyavadi Thali
+    </header>
+
+    <div class="container">
+        <section class="thali-section">
+            <div class="thali-image">
+                <img src="https://im.indiatimes.in/media/content/2015/Jun/9%20suruchi_1435316828.jpg" alt="Kathiyavadi Thali">
+            </div>
+            <div class="thali-details">
+                <h2>What's in the Thali?</h2>
+                <ul>
+                    <li>Gujarati Khichdi</li>
+                    <li>Kadhi</li>
+                    <li>Bhakri</li>
+                    <li>Baingan Bharta</li>
+                    <li>Churma</li>
+                    <li>Gujarati Farsan</li>
+                    <li>Pickle</li>
+                    <li>Buttermilk</li>
+                    <li>Sweet (Gulab Jamun)</li>
+                </ul>
+                <p class="price">Price: ₹380</p>
+                <button onclick="redirectToKathiSucPage()">Order Now</button>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2024 Kathiyavadi Cuisine. All rights reserved.
+    </footer>
+
+    <script>
+
+        function redirectToKathiSucPage() {
+          window.location.href ="kathiyavadisuccess.html";
+        }
+      </script>
+
+</body>
+
+</html>

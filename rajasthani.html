@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajasthani Thali</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f7f2;
+        }
+
+        header {
+            background-color: #d9534f;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .thali-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .thali-image img {
+           padding-top: 50px;
+           padding-bottom: 50px;
+
+           padding-left: 90px;
+             width: 300px;
+             height: 250px;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+
+        .thali-details {
+            padding: 20px;
+        }
+
+        .thali-details h2 {
+            color: #333;
+            font-size: 20px;
+            margin-top: 0;
+        }
+
+        .thali-details ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .thali-details ul li {
+            margin-bottom: 8px;
+        }
+
+        .price {
+            font-weight: bold;
+            font-size: 18px;
+            color: #d9534f;
+        }
+
+        button {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #c9302c;
+        }
+
+        footer {
+           margin-top: 407px;
+
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        Rajasthani Thali
+    </header>
+
+    <div class="container">
+        <section class="thali-section">
+            <div class="thali-image">
+                <img src="https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F3462%2Ftrend20220321090619.jpg" alt="Rajasthani Thali">
+            </div>
+            <div class="thali-details">
+                <h2>What's in the Thali?</h2>
+                <ul>
+                    <li>Dal Baati Churma</li>
+                    <li>Gatte ki Sabzi</li>
+                    <li>Ker Sangri</li>
+                    <li>Bajre ki Roti</li>
+                    <li>Papad</li>
+                    <li>Pickle</li>
+                    <li>Buttermilk</li>
+                    <li>Sweet (Ghevar)</li>
+                </ul>
+                <p class="price">Price: ₹240</p>
+                <button onclick="redirectToRajSucPage()">Order Now</button>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2024 Rajasthani Cuisine. All rights reserved.
+    </footer>
+
+    <script>
+
+        function redirectToRajSucPage() {
+          window.location.href ="rajasthanisuccess.html";
+        }
+      </script>
+
+</body>
+
+</html>

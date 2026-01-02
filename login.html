@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+      background-image: url('https://wallpapers.com/images/hd/food-4k-1vrcb0mw76zcg4qf.jpg');
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-form {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .login-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .login-form input {
+          align-self: center;
+            width: 92%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        /* .login-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        } */
+        
+        #login{
+          display: flex;
+          text-decoration: none;
+          color:white;
+          width: 50%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            justify-content: center;
+            margin:0px auto;
+        }
+        .login-form button:hover {
+            background-color: #45a049;
+        }
+        .login-form .register-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .login-form .register-link a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .login-form .register-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-form">
+        <h2>Login</h2>
+        <form action="#">
+            <input type="email" placeholder="Email Id" required>
+            <input type="password" placeholder="Password" required>
+            <a href="logsuccess.html" id="login">Login</a>
+        </form>
+        <div class="register-link">
+            <p>Don't have an account? <a href="#" onclick="redirectToRegPage()">Register</a></p>
+        </div>
+    </div>
+
+    <script>
+      function redirectToRegPage() {
+      window.location.href = "registration.html";
+    }
+
+    function storeLoginDetails() {
+        // Get the values entered by the user
+        const email = document.querySelector('input[type="text"]').value;
+        const password = document.querySelector('input[type="password"]').value;
+
+        // Check if email and password are not empty
+        if (email.trim() !== '' && password.trim() !== '') {
+          // Create an object to store login details
+          const loginDetails = {
+            email: email,
+            password: password
+          };
+
+          // Convert the object to JSON string and store in local storage
+          localStorage.setItem('loginDetails', JSON.stringify(loginDetails));
+
+          // Optionally, you can redirect the user to another page after storing the details
+          // window.location.href = "dashboard.html";
+        } else {
+          alert("Please enter both email and password.");
+        }
+      }
+
+
+    
+        function redirectToLoPage() {
+            window.location.href = "logsuccess.html";
+        }
+    </script>
+</body>
+</html>
